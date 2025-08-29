@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siyara Wasla - Streamline Your Car Wash Operations</title>
+  <title>سيارة وصلة - Streamline Your Car Wash Operations</title>
   <style>
     body {
       margin: 0;
@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      transition: direction 0.3s ease;
     }
 
     header {
@@ -22,14 +23,13 @@
       border-bottom: 1px solid #ddd;
       background-color: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
+      padding: 16px;
     }
 
     header .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 64px;
-      padding: 0 16px;
     }
 
     header nav a {
@@ -45,6 +45,26 @@
     header nav a:hover {
       background-color: #007bff;
       color: #fff;
+    }
+
+    /* Language Toggle */
+    .language-toggle {
+      display: flex;
+      gap: 8px; /* Space between buttons */
+    }
+
+    .language-toggle button {
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .language-toggle button:hover {
+      background-color: #0056b3;
     }
 
     main {
@@ -175,10 +195,15 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <span class="logo">Siyara Wasla</span>
+      <span class="logo">سيارة وصلة | Siyara Wasla</span>
       <nav>
-        <a href="https://carwashsales.github.io/carwashsales/" target="_blank">Access Web App</a>
+        <a href="https://carwashsales.github.io/carwashsales/" target="_blank">الوصول إلى التطبيق | Access Web App</a>
       </nav>
+      <!-- Language Toggle -->
+      <div class="language-toggle">
+        <button onclick="switchLanguage('ar')">العربية</button>
+        <button onclick="switchLanguage('en')">English</button>
+      </div>
     </div>
   </header>
 
@@ -186,11 +211,14 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Streamline Your Car Wash Operations</h1>
-        <p>Siyara Wasla is the all-in-one solution to manage services, track sales, and calculate commissions with ease.</p>
+        <h1 id="hero-title">تبسيط عمليات غسيل السيارات | Streamline Your Car Wash Operations</h1>
+        <p id="hero-description">
+          سيارة وصلة هي الحل الشامل لإدارة الخدمات، تتبع المبيعات، وحساب العمولات بسهولة.
+          | Siyara Wasla is the all-in-one solution to manage services, track sales, and calculate commissions with ease.
+        </p>
         <div>
-          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">Try Web App</a>
-          <a href="/path-to-your-apk-file.apk" download class="button secondary">Download APK</a>
+          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">جرب التطبيق | Try Web App</a>
+          <a href="/path-to-your-apk-file.apk" download class="button secondary">تحميل التطبيق | Download APK</a>
         </div>
       </div>
     </section>
@@ -198,26 +226,38 @@
     <!-- Features Section -->
     <section class="features">
       <div class="container">
-        <h2>Features Built for Your Success</h2>
-        <p>Everything you need to run your car wash business efficiently.</p>
+        <h2 id="features-title">الميزات المصممة لنجاحك | Features Built for Your Success</h2>
+        <p id="features-description">
+          كل ما تحتاجه لتشغيل أعمال غسيل السيارات بكفاءة.
+          | Everything you need to run your car wash business efficiently.
+        </p>
         <div class="grid">
+          <!-- Feature Card 1 -->
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
               <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <h3>Service Recording</h3>
-            <p>Quickly record every service with an intuitive form, from wash type to staff member.</p>
+            <h3 id="feature-1-title">تسجيل الخدمات | Service Recording</h3>
+            <p id="feature-1-description">
+              سجل كل خدمة بسرعة باستخدام نموذج سهل الاستخدام، من نوع الغسيل إلى موظف الخدمة.
+              | Quickly record every service with an intuitive form, from wash type to staff member.
+            </p>
           </div>
+          <!-- Feature Card 2 -->
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="12" y1="20" x2="12" y2="10"></line>
               <line x1="18" y1="20" x2="18" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="16"></line>
             </svg>
-            <h3>Daily Reports</h3>
-            <p>Generate daily summaries of total sales and commissions to stay on top of your earnings.</p>
+            <h3 id="feature-2-title">التقارير اليومية | Daily Reports</h3>
+            <p id="feature-2-description">
+              إنشاء ملخصات يومية للمبيعات والعمولات للبقاء على اطلاع دائم بأرباحك.
+              | Generate daily summaries of total sales and commissions to stay on top of your earnings.
+            </p>
           </div>
+          <!-- Feature Card 3 -->
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
@@ -225,16 +265,23 @@
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
-            <h3>Customer History</h3>
-            <p>Track customer visits and send promotional messages via WhatsApp to build loyalty.</p>
+            <h3 id="feature-3-title">تاريخ العملاء | Customer History</h3>
+            <p id="feature-3-description">
+              تتبع زيارات العملاء وأرسل رسائل ترويجية عبر WhatsApp لبناء الولاء.
+              | Track customer visits and send promotional messages via WhatsApp to build loyalty.
+            </p>
           </div>
+          <!-- Feature Card 4 -->
           <div class="card">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M10.32 4H19c.66 0 1.21.45 1.49 1.08l3.84 8.44c.18.4.29.84.29 1.32v6.68c0 .33-.11.64-.29 1.32l-3.84 8.44A1.73 1.73 0 0 1 19 20H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h5.32l2-4z"></path>
               <circle cx="12" cy="12" r="3"></circle>
             </svg>
-            <h3>Service Management</h3>
-            <p>Easily customize service types, pricing, and commission structures on the fly.</p>
+            <h3 id="feature-4-title">إدارة الخدمات | Service Management</h3>
+            <p id="feature-4-description">
+              قم بتخصيص أنواع الخدمات، الأسعار، وهياكل العمولات بسهولة.
+              | Easily customize service types, pricing, and commission structures on the fly.
+            </p>
           </div>
         </div>
       </div>
@@ -243,11 +290,14 @@
     <!-- Call to Action Section -->
     <section class="cta">
       <div class="container">
-        <h2>Ready to Transform Your Car Wash Business?</h2>
-        <p>Get started today with Siyara Wasla and take control of your operations.</p>
+        <h2 id="cta-title">هل أنت مستعد لتحويل أعمال غسيل السيارات الخاصة بك؟ | Ready to Transform Your Car Wash Business?</h2>
+        <p id="cta-description">
+          ابدأ اليوم مع سيارة وصلة وتحكم في عملياتك.
+          | Get started today with Siyara Wasla and take control of your operations.
+        </p>
         <div>
-          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">Try Web App</a>
-          <a href="/path-to-your-apk-file.apk" download class="button secondary">Download APK</a>
+          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">جرب التطبيق | Try Web App</a>
+          <a href="/path-to-your-apk-file.apk" download class="button secondary">تحميل التطبيق | Download APK</a>
         </div>
       </div>
     </section>
@@ -255,8 +305,69 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2023 Siyara Wasla. All rights reserved.</p>
-    <a href="/privacy-policy">Privacy Policy</a>
+    <p>&copy; 2023 سيارة وصلة. جميع الحقوق محفوظة. | &copy; 2023 Siyara Wasla. All rights reserved.</p>
+    <a href="/privacy-policy">سياسة الخصوصية | Privacy Policy</a>
   </footer>
+
+  <script>
+    // Function to switch language
+    function switchLanguage(lang) {
+      const elements = {
+        'hero-title': ['تبسيط عمليات غسيل السيارات', 'Streamline Your Car Wash Operations'],
+        'hero-description': [
+          'سيارة وصلة هي الحل الشامل لإدارة الخدمات، تتبع المبيعات، وحساب العمولات بسهولة.',
+          'Siyara Wasla is the all-in-one solution to manage services, track sales, and calculate commissions with ease.'
+        ],
+        'features-title': ['الميزات المصممة لنجاحك', 'Features Built for Your Success'],
+        'features-description': [
+          'كل ما تحتاجه لتشغيل أعمال غسيل السيارات بكفاءة.',
+          'Everything you need to run your car wash business efficiently.'
+        ],
+        'feature-1-title': ['تسجيل الخدمات', 'Service Recording'],
+        'feature-1-description': [
+          'سجل كل خدمة بسرعة باستخدام نموذج سهل الاستخدام، من نوع الغسيل إلى موظف الخدمة.',
+          'Quickly record every service with an intuitive form, from wash type to staff member.'
+        ],
+        'feature-2-title': ['التقارير اليومية', 'Daily Reports'],
+        'feature-2-description': [
+          'إنشاء ملخصات يومية للمبيعات والعمولات للبقاء على اطلاع دائم بأرباحك.',
+          'Generate daily summaries of total sales and commissions to stay on top of your earnings.'
+        ],
+        'feature-3-title': ['تاريخ العملاء', 'Customer History'],
+        'feature-3-description': [
+          'تتبع زيارات العملاء وأرسل رسائل ترويجية عبر WhatsApp لبناء الولاء.',
+          'Track customer visits and send promotional messages via WhatsApp to build loyalty.'
+        ],
+        'feature-4-title': ['إدارة الخدمات', 'Service Management'],
+        'feature-4-description': [
+          'قم بتخصيص أنواع الخدمات، الأسعار، وهياكل العمولات بسهولة.',
+          'Easily customize service types, pricing, and commission structures on the fly.'
+        ],
+        'cta-title': [
+          'هل أنت مستعد لتحويل أعمال غسيل السيارات الخاصة بك؟',
+          'Ready to Transform Your Car Wash Business?'
+        ],
+        'cta-description': [
+          'ابدأ اليوم مع سيارة وصلة وتحكم في عملياتك.',
+          'Get started today with Siyara Wasla and take control of your operations.'
+        ]
+      };
+
+      // Update text content based on language
+      Object.keys(elements).forEach((key) => {
+        const element = document.getElementById(key);
+        if (element) {
+          element.textContent = elements[key][lang === 'ar' ? 0 : 1];
+        }
+      });
+
+      // Update direction and language attributes
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    // Default language is Arabic
+    switchLanguage('ar');
+  </script>
 </body>
 </html>
