@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siyara Wasla - Streamline Your Car Wash Operations</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid #ddd;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+      padding: 0 16px;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #007bff;
+      padding: 8px 16px;
+      border: 1px solid #007bff;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    header nav a:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section.hero {
+      position: relative;
+      overflow: hidden;
+      padding: 80px 16px;
+      text-align: center;
+    }
+
+    section.hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://placehold.co/1920x1080') no-repeat center center/cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    section.hero .container {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 16px;
+    }
+
+    section.hero p {
+      font-size: 1.25rem;
+      margin-bottom: 32px;
+    }
+
+    section.features {
+      background-color: #e9ecef;
+      padding: 64px 16px;
+    }
+
+    section.features .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section.features .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      text-align: center;
+    }
+
+    section.features .card svg {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+      color: #007bff;
+    }
+
+    section.cta {
+      background-color: #007bff;
+      color: #fff;
+      padding: 64px 16px;
+      text-align: center;
+    }
+
+    section.cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    section.cta p {
+      font-size: 1.25rem;
+      margin-bottom: 32px;
+    }
+
+    section.cta a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    section.cta a.primary {
+      background-color: #fff;
+      color: #007bff;
+    }
+
+    section.cta a.secondary {
+      background-color: #0d6efd;
+    }
+
+    section.cta a:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 16px;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #666;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <span class="logo">Siyara Wasla</span>
+      <nav>
+        <a href="https://carwashsales.github.io/carwashsales/" target="_blank">Access Web App</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Streamline Your Car Wash Operations</h1>
+        <p>Siyara Wasla is the all-in-one solution to manage services, track sales, and calculate commissions with ease.</p>
+        <div>
+          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">Try Web App</a>
+          <a href="/path-to-your-apk-file.apk" download class="button secondary">Download APK</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>Features Built for Your Success</h2>
+        <p>Everything you need to run your car wash business efficiently.</p>
+        <div class="grid">
+          <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h3>Service Recording</h3>
+            <p>Quickly record every service with an intuitive form, from wash type to staff member.</p>
+          </div>
+          <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="20" x2="12" y2="10"></line>
+              <line x1="18" y1="20" x2="18" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="16"></line>
+            </svg>
+            <h3>Daily Reports</h3>
+            <p>Generate daily summaries of total sales and commissions to stay on top of your earnings.</p>
+          </div>
+          <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h3>Customer History</h3>
+            <p>Track customer visits and send promotional messages via WhatsApp to build loyalty.</p>
+          </div>
+          <div class="card">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.32 4H19c.66 0 1.21.45 1.49 1.08l3.84 8.44c.18.4.29.84.29 1.32v6.68c0 .33-.11.64-.29 1.32l-3.84 8.44A1.73 1.73 0 0 1 19 20H5a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2h5.32l2-4z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h3>Service Management</h3>
+            <p>Easily customize service types, pricing, and commission structures on the fly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Transform Your Car Wash Business?</h2>
+        <p>Get started today with Siyara Wasla and take control of your operations.</p>
+        <div>
+          <a href="https://carwashsales.github.io/carwashsales/" target="_blank" class="button primary">Try Web App</a>
+          <a href="/path-to-your-apk-file.apk" download class="button secondary">Download APK</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Siyara Wasla. All rights reserved.</p>
+    <a href="/privacy-policy">Privacy Policy</a>
+  </footer>
+</body>
+</html>
